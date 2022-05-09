@@ -1,8 +1,8 @@
 use cosmwasm_std::{Addr, BlockInfo, Decimal, Timestamp, Uint128};
-use cw_storage_plus::{Index, IndexList, IndexedMap, Item, MultiIndex};
+use cw_storage_plus::{Index, IndexList, IndexedMap, Item, MultiIndex, PrimaryKey};
 use cw_utils::Duration;
 use schemars::JsonSchema;
-use serde::{Deserialize, Serialize};
+use serde::{de::DeserializeOwned, Deserialize, Serialize};
 use sg_controllers::Hooks;
 
 use crate::helpers::ExpiryRange;
@@ -39,8 +39,10 @@ pub const COLLECTION_BID_HOOKS: Hooks = Hooks::new("collection-bid-hooks");
 
 pub type TokenId = u32;
 
-pub trait Order {
+pub trait Order<'a, K: PrimaryKey<'a>, T: Serialize + DeserializeOwned + Clone, I: IndexList<T>> {
     fn expires_at(&self) -> Timestamp;
+
+    fn store(&self) -> IndexedMap<'a, K, T, I>;
 
     fn is_expired(&self, block: &BlockInfo) -> bool {
         self.expires_at() <= block.time
@@ -69,9 +71,13 @@ pub struct Ask {
     pub is_active: bool,
 }
 
-impl Order for Ask {
+impl<'a, K, T, I> Order<'a, K, T, I> for Ask {
     fn expires_at(&self) -> Timestamp {
         self.expires_at
+    }
+
+    fn store(&self) -> IndexedMap<K, T, I> {
+        asks()
     }
 }
 
@@ -140,9 +146,13 @@ impl Bid {
     }
 }
 
-impl Order for Bid {
+impl<'a, K, T, I> Order<'a, K, T, I> for Bid {
     fn expires_at(&self) -> Timestamp {
         self.expires_at
+    }
+
+    fn store(&self) -> IndexedMap<K, T, I> {
+        bids()
     }
 }
 
@@ -209,9 +219,13 @@ pub struct CollectionBid {
     pub expires_at: Timestamp,
 }
 
-impl Order for CollectionBid {
+impl<'a, K, T, I> Order<'a, K, T, I> for CollectionBid {
     fn expires_at(&self) -> Timestamp {
         self.expires_at
+    }
+
+    fn store(&self) -> IndexedMap<K, T, I> {
+        collection_bids()
     }
 }
 
