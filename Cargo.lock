@@ -61,9 +61,9 @@ checksum = "e4c78c047431fee22c1a7bb92e00ad095a02a983affe4d8a72e2a2c62c1b94f3"
 
 [[package]]
 name = "cosmwasm-crypto"
-version = "1.0.0-rc.0"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f49e4534084522eebde4064033a2eb6ed7184a06d068f076b3db915e2c69a103"
+checksum = "5eb0afef2325df81aadbf9be1233f522ed8f6e91df870c764bc44cca2b1415bd"
 dependencies = [
  "digest",
  "ed25519-zebra",
@@ -74,18 +74,18 @@ dependencies = [
 
 [[package]]
 name = "cosmwasm-derive"
-version = "1.0.0-rc.0"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "38b240305ecfbbc5dacbf5b45525435f1d99074be49d403f650fa58c90b4bc51"
+checksum = "4b36e527620a2a3e00e46b6e731ab6c9b68d11069c986f7d7be8eba79ef081a4"
 dependencies = [
  "syn",
 ]
 
 [[package]]
 name = "cosmwasm-schema"
-version = "1.0.0-rc.0"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f95658fed27bc64d4547da6fdbd2f7375bbf84e2f4c6ee6f0cab544294ecaca"
+checksum = "772e80bbad231a47a2068812b723a1ff81dd4a0d56c9391ac748177bea3a61da"
 dependencies = [
  "schemars",
  "serde_json",
@@ -93,9 +93,9 @@ dependencies = [
 
 [[package]]
 name = "cosmwasm-std"
-version = "1.0.0-rc.0"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cb107e3de4e3f67e8b02f3345a26a21c909ed10aa5981d1ae95e3fcf03093eeb"
+checksum = "875994993c2082a6fcd406937bf0fca21c349e4a624f3810253a14fa83a3a195"
 dependencies = [
  "base64",
  "cosmwasm-crypto",
@@ -110,9 +110,9 @@ dependencies = [
 
 [[package]]
 name = "cosmwasm-storage"
-version = "1.0.0-rc.0"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d4b68ea4e5e9e13e1af12f248305d462089683c26f146f9fa66c4f7a3a866d1"
+checksum = "d18403b07304d15d304dad11040d45bbcaf78d603b4be3fb5e2685c16f9229b5"
 dependencies = [
  "cosmwasm-std",
  "serde",
@@ -674,8 +674,7 @@ dependencies = [
 [[package]]
 name = "sg-controllers"
 version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8139d4ec93b30e68b5fe598076bf80bc778e950e1b1af6e7cd7a38da439bbc79"
+source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
 dependencies = [
  "cosmwasm-std",
  "cw-storage-plus",
@@ -704,7 +703,7 @@ dependencies = [
  "sg-controllers",
  "sg-multi-test",
  "sg-std",
- "sg1 0.13.0",
+ "sg1",
  "sg721",
  "thiserror",
 ]
@@ -712,8 +711,7 @@ dependencies = [
 [[package]]
 name = "sg-multi-test"
 version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68b2c20961ef0d92d3e071c923c2ceca525dddb4a0c57991c418f31d708c346f"
+source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
 dependencies = [
  "anyhow",
  "cosmwasm-std",
@@ -725,9 +723,8 @@ dependencies = [
 
 [[package]]
 name = "sg-std"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8333ebd66ab56cd6f83368598c3f810e95b41a10fd81ac3e447792996824deba"
+version = "0.12.1"
+source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
 dependencies = [
  "cosmwasm-std",
  "cw-utils",
@@ -740,22 +737,8 @@ dependencies = [
 
 [[package]]
 name = "sg1"
-version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b9b26273bdcfd32e1f8adfd99a4d168717fa5adc570c8b67b4081037791e212"
-dependencies = [
- "cosmwasm-std",
- "cw-utils",
- "serde",
- "sg-std",
- "thiserror",
-]
-
-[[package]]
-name = "sg1"
 version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f84da5448efc51fb2484fa1aa3d29402b1cd2fc26d42f4e2cefa73090a85d2da"
+source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
 dependencies = [
  "cosmwasm-std",
  "cw-utils",
@@ -766,9 +749,8 @@ dependencies = [
 
 [[package]]
 name = "sg721"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10578a37c6be874e4db80d9d9231d834c751154c6b2c8f1e5facff03edf4ab08"
+version = "0.12.2"
+source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
 dependencies = [
  "cosmwasm-std",
  "cosmwasm-storage",
@@ -780,7 +762,7 @@ dependencies = [
  "schemars",
  "serde",
  "sg-std",
- "sg1 0.12.1",
+ "sg1",
  "thiserror",
  "url",
 ]
