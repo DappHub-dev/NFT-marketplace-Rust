@@ -674,7 +674,7 @@ dependencies = [
 [[package]]
 name = "sg-controllers"
 version = "0.12.1"
-source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
+source = "git+https://github.com/public-awesome/launchpad?branch=fairburn#07fc6a5c4f1f09b52e235195bccf6c5e1e4106be"
 dependencies = [
  "cosmwasm-std",
  "cw-storage-plus",
@@ -711,7 +711,7 @@ dependencies = [
 [[package]]
 name = "sg-multi-test"
 version = "0.13.0"
-source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
+source = "git+https://github.com/public-awesome/launchpad?branch=fairburn#07fc6a5c4f1f09b52e235195bccf6c5e1e4106be"
 dependencies = [
  "anyhow",
  "cosmwasm-std",
@@ -724,7 +724,7 @@ dependencies = [
 [[package]]
 name = "sg-std"
 version = "0.12.1"
-source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
+source = "git+https://github.com/public-awesome/launchpad?branch=fairburn#07fc6a5c4f1f09b52e235195bccf6c5e1e4106be"
 dependencies = [
  "cosmwasm-std",
  "cw-utils",
@@ -738,7 +738,7 @@ dependencies = [
 [[package]]
 name = "sg1"
 version = "0.13.0"
-source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
+source = "git+https://github.com/public-awesome/launchpad?branch=fairburn#07fc6a5c4f1f09b52e235195bccf6c5e1e4106be"
 dependencies = [
  "cosmwasm-std",
  "cw-utils",
@@ -750,7 +750,7 @@ dependencies = [
 [[package]]
 name = "sg721"
 version = "0.12.2"
-source = "git+https://github.com/public-awesome/launchpad?branch=feature/fund-fairburn-pool#57d7b2ebe146ad7c2164c0e16a0439d9bd0433b9"
+source = "git+https://github.com/public-awesome/launchpad?branch=fairburn#07fc6a5c4f1f09b52e235195bccf6c5e1e4106be"
 dependencies = [
  "cosmwasm-std",
  "cosmwasm-storage",
